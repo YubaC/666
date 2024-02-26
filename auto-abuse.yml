@@ -1,0 +1,19 @@
+# 自动骂人
+
+name: 自动骂人
+
+on:
+  workflow_dispatch:
+
+jobs:
+  auto-abuse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: auto-abuse
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: "create-issue"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "tmd"
+          body: "自动骂人"
+          emoji: "confused"
